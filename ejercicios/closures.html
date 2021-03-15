@@ -12,36 +12,39 @@
       // printColor
 
       // IIFE
-       (function() {
-         let color = 'green';
-        function printColor() {
-          console.log(color);
-        }
-         printColor();
-       })();
+      // (function() {
+      //   let color = 'green';
+
+      //   function printColor() {
+      //     console.log(color);
+      //   }
+
+      //   printColor();
+      // })();
 
       // Funciones que regresan funciones
-     /* function makeColorPrinter(color) {
-      let colorMessage = `The color is ${color}`;
+      // function makeColorPrinter(color) {
+      //   let colorMessage = `The color is ${color}`;
 
-         return function() {
-          console.log(colorMessage);
-         };
-       }
+      //   return function() {
+      //     console.log(colorMessage);
+      //   };
+      // }
 
-       let greenColorPrinter = makeColorPrinter('green');
-       console.log(greenColorPrinter());*/
+      // let greenColorPrinter = makeColorPrinter('green');
+      // console.log(greenColorPrinter());
 
       // variables "privadas"
-     /*  const counter = {
-        count: 3,
-       };
-       console.log(counter.count);
-       counter.count = 99; //no es privada
-       console.log(counter.count);*/
+      // const counter = {
+      //   count: 3,
+      // };
+      // console.log(counter.count);
+      // counter.count = 99;
+      // console.log(counter.count);
 
       function makeCounter(n) {
         let count = n;
+
         return {
           increase: function() {
             count = count + 1;
@@ -54,7 +57,9 @@
           },
         };
       }
+
       let counter = makeCounter(7);
+
       console.log('The count is:', counter.getCount());
       counter.increase();
       console.log('The count is:', counter.getCount());

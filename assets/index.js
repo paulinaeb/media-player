@@ -8,10 +8,10 @@ const player = new MediaPlayer({
   plugins: [new AutoPlay(), new AutoPause()],
 });
 
-const playButton = document.querySelector('#playpause');
+const playButton = document.querySelector('#playButton');
 playButton.onclick = () => player.togglePlay();
 
-const muteButton = document.querySelector('#muteunmute');
+const muteButton = document.querySelector('#muteButton');
 muteButton.onclick = () => {
   if (player.media.muted) {
     player.unmute();
@@ -20,8 +20,8 @@ muteButton.onclick = () => {
   }
 };
 
-if ('serviceWorker' in navigator){
-  navigator.serviceWorker.register('/sw.js').catch(error=>{
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/sw.js').catch(error => {
     console.log(error.message);
   });
 }
